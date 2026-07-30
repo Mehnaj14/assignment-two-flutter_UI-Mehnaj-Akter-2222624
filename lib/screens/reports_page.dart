@@ -78,61 +78,55 @@ Widget _buildHeader() {
 }
 
 Widget _buildReportCard() {
-  return SizedBox(
-    height: 210,
-    child: Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(18),
+  return Card(
+    elevation: 2,
+    margin: EdgeInsets.zero,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(18),
+    ),
+    child: Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 22,
+        vertical: 16,
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 24,
-          vertical: 18,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              "Monthly Spending Report",
-              style: TextStyle(
-                fontSize: 21,
-                fontWeight: FontWeight.bold,
-              ),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: const [
+          Text(
+            "Monthly Spending Report",
+            maxLines: 1,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
             ),
-
-            SizedBox(height: 16),
-
-            Text(
-              "Total Expenses (Last 30 days)",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 14,
-              ),
+          ),
+          SizedBox(height: 14),
+          Text(
+            "Total Expenses (Last 30 days)",
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 13,
             ),
-
-            SizedBox(height: 10),
-
-            Text(
-              "-\$1270.00",
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
+          ),
+          SizedBox(height: 8),
+          Text(
+            "-\$1270.00",
+            style: TextStyle(
+              color: Colors.red,
+              fontSize: 27,
+              fontWeight: FontWeight.bold,
             ),
-
-            SizedBox(height: 10),
-
-            Text(
-              "↑ Up 12% from last month",
-              style: TextStyle(
-                color: Colors.redAccent,
-                fontSize: 15,
-              ),
+          ),
+          SizedBox(height: 8),
+          Text(
+            "↑ Up 12% from last month",
+            style: TextStyle(
+              color: Colors.redAccent,
+              fontSize: 13,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     ),
   );
